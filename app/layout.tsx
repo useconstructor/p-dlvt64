@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "App",
-  description: "Built by Constructor",
+  title: "Altitude Coffee Roasters | Café de Especialidad - Bogotá",
+  description: "Tostadora de café de especialidad en Bogotá. Granos de origen único de Huila, Nariño y Etiopía. Proceso artesanal, perfiles de tueste transparentes. Venta directa a cafeterías y consumidores.",
+  keywords: "café especialidad, tostadora café, Bogotá, café colombiano, Huila, Nariño, café origen único",
 };
 
 export default function RootLayout({
@@ -13,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

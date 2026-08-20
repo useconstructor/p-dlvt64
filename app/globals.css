@@ -1,24 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --color-background: oklch(1 0 0);
-  --color-foreground: oklch(0.145 0 0);
-  --color-card: oklch(1 0 0);
-  --color-card-foreground: oklch(0.145 0 0);
-  --color-primary: oklch(0.205 0 0);
-  --color-primary-foreground: oklch(0.985 0 0);
-  --color-secondary: oklch(0.97 0 0);
-  --color-secondary-foreground: oklch(0.205 0 0);
-  --color-muted: oklch(0.97 0 0);
-  --color-muted-foreground: oklch(0.556 0 0);
-  --color-accent: oklch(0.97 0 0);
-  --color-accent-foreground: oklch(0.205 0 0);
-  --color-destructive: oklch(0.577 0.245 27.325);
-  --color-border: oklch(0.922 0 0);
-  --color-input: oklch(0.922 0 0);
-  --color-ring: oklch(0.708 0 0);
+  --font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Fraunces', ui-serif, Georgia, serif;
+
+  /* Altitude Coffee Palette */
+  --color-coffee-dark: #1C1714;
+  --color-coffee-medium: #2A2118;
+  --color-cream: #D4C4A8;
+  --color-olive: #6B7F59;
+  --color-tan: #A69580;
+
+  /* Semantic mappings */
+  --color-background: #1C1714;
+  --color-foreground: #D4C4A8;
+  --color-card: #2A2118;
+  --color-card-foreground: #D4C4A8;
+  --color-primary: #6B7F59;
+  --color-primary-foreground: #1C1714;
+  --color-secondary: #2A2118;
+  --color-secondary-foreground: #D4C4A8;
+  --color-muted: #2A2118;
+  --color-muted-foreground: #A69580;
+  --color-accent: #6B7F59;
+  --color-accent-foreground: #1C1714;
+  --color-destructive: #9B4444;
+  --color-border: #3D3229;
+  --color-input: #3D3229;
+  --color-ring: #6B7F59;
   --radius: 0.5rem;
 }
 
@@ -26,8 +36,21 @@
   * {
     border-color: var(--color-border);
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
